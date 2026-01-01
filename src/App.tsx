@@ -144,15 +144,19 @@ export default function App() {
   ======================= */
   return (
     <div
-      className={`min-h-screen flex items-center justify-center p-4 transition ${
-        dark ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-800"
-      }`}
+className={`min-h-screen flex items-center justify-center p-4 transition-colors duration-300 ${
+  dark
+    ? "bg-[#0b0f19] text-gray-100"
+    : "bg-gradient-to-br from-gray-50 to-gray-200 text-gray-800"
+}`}
+
       dir={lang === "ar" ? "rtl" : "ltr"}
     >
       <div
-        className={`w-full max-w-xl rounded-2xl shadow-lg p-6 space-y-8 ${
-          dark ? "bg-gray-800" : "bg-white"
-        }`}
+className={`w-full max-w-xl rounded-3xl shadow-2xl p-8 space-y-8 backdrop-blur ${
+  dark ? "bg-[#111827]/90" : "bg-white/90"
+}`}
+
       >
         {/* Header */}
         <div className="flex justify-between items-center">
@@ -160,13 +164,15 @@ export default function App() {
           <div className="flex gap-2">
             <button
               onClick={() => setLang(lang === "ar" ? "en" : "ar")}
-              className="px-3 py-1 rounded bg-blue-600 text-white text-sm"
+            className="px-4 py-1.5 rounded-full bg-blue-600 hover:bg-blue-700 transition text-white text-sm shadow"
+
             >
               {t.lang}
             </button>
             <button
               onClick={() => setDark(!dark)}
-              className="px-3 py-1 rounded bg-gray-600 text-white text-sm"
+              className="px-4 py-1.5 rounded-full bg-gray-700 hover:bg-gray-900 transition text-white text-sm shadow"
+
             >
               {dark ? t.light : t.dark}
             </button>
@@ -181,7 +187,8 @@ export default function App() {
               type="number"
               value={oldAmount}
               onChange={(e) => convertOldToNew(e.target.value)}
-              className="w-full rounded-lg border p-2 text-black"
+             className="w-full rounded-xl border border-gray-300 dark:border-gray-700 p-3 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
+
             />
           </div>
 
@@ -220,7 +227,8 @@ export default function App() {
 
           <button
             onClick={calculateMixPay}
-            className="w-full bg-blue-600 text-white py-2 rounded-lg"
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white py-3 rounded-xl font-semibold transition shadow-lg"
+
           >
             {t.calc}
           </button>
