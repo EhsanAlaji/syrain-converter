@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import x from "../../syrain-converter/src/assets/ssss.jpeg";
+import x from "./assets/ssss.jpeg";
+
 /* =======================
    Types
 ======================= */
