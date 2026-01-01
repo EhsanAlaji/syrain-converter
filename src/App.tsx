@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import x from "../../syrain-converter/src/assets/ssss.jpeg";
 /* =======================
    Types
 ======================= */
@@ -231,8 +231,11 @@ export default function App() {
               <p>{payNew} {t.new}</p>
             </div>
           )}
+
+           <img src={x} className="w-full h-auto" alt="" />
         </div>
       </div>
+     
     </div>
   );
 }
